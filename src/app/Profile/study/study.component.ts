@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { EditStudierComponent } from '../edit-studier/edit-studier.component';
-import { StudiersService } from '../../../AngularServices/studiers.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class StudyComponent implements OnInit {
 
-  constructor(private StudiersService: StudiersService,public dialog: MatDialog,private router: ActivatedRoute) { }
+  constructor(public dialog: MatDialog,private router: ActivatedRoute) { }
   @Input() profileDictionary;
  // Kompetenser_intygs;
 
@@ -23,7 +22,7 @@ export class StudyComponent implements OnInit {
   async ngOnInit(): Promise<void> {
 
   }
-  
+
   openDialogAddStudier() {
     const edit = false
 
@@ -45,7 +44,7 @@ export class StudyComponent implements OnInit {
       width: '1000px',
       // height: '400px',
        data: {
-         profileDictionary:this.profileDictionary,       
+         profileDictionary:this.profileDictionary,
          edit:edit,
          study:study,
        }});
