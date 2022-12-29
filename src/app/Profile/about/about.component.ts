@@ -7,7 +7,7 @@ import { EditOMComponent } from '../edit-om/edit-om.component';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  @Input() profileDictionary;
+  @Input() profileDictionary:any;
 
   constructor() { }
 
@@ -20,9 +20,9 @@ export class AboutComponent implements OnInit {
        data: {
          profileDictionary:this.profileDictionary
        }});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
 
 }

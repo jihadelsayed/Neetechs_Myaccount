@@ -71,7 +71,7 @@
         <mat-form-field class="example-full-width" appearance="outline" >
           <mat-select [(ngModel)]="city">
             <div *ngFor="let option of filteredCityOptions | async" >
-              <mat-option [value]="option.title" *ngIf="option.type =='K'">{{option.title}}</mat-option>
+              <mat-option [value]="option['title']" *ngIf="option['type'] =='K'">{{option['title']}}</mat-option>
             </div>
           </mat-select>
         </mat-form-field>
@@ -98,7 +98,7 @@
         <mat-icon matSuffix><i class='fab fa-linkedin fa-sm'></i></mat-icon>
       </mat-form-field>
     </div>
-    
+
     <div fxLayout="column" fxFlex=25>
       <mat-form-field appearance="outline">
         <mat-label>Annat (Fri text) </mat-label>
@@ -118,8 +118,8 @@
 </div>
 
 <mat-divider></mat-divider>
-<mat-toolbar> 
+<mat-toolbar>
   <span class="example-spacer"></span>
   <button mat-flat-button class="btnSpara" (click)="OnSubmit()">Spara</button>
-  
+
  </mat-toolbar>

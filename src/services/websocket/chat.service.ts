@@ -25,7 +25,8 @@ export interface orderNotificationInterface {
   providedIn: 'root'
 })
 export class ChatService {
-  public messages: Subject<SocketInterface> | undefined;
+  //public messages: Subject<SocketInterface> | undefined;
+  public messages: any;
   public order: Subject<orderNotificationInterface> | undefined;
   userToken: string | null | undefined;
   constructor(private wsService: WebsocketService, private http: HttpClient, private router: ActivatedRoute) {

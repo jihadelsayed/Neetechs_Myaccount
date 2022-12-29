@@ -21,18 +21,18 @@ export class ProfileComponent implements OnInit {
   httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   currentUsername = this.router.snapshot.params['username'];
-  userInfo: Observable<PersonInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'UserInfo'));
-  LogedInUserInfo: PersonInterface = JSON.parse(localStorage.getItem('UserInfo'));
+  userInfo: Observable<PersonInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'UserInfo') || '{}');
+  LogedInUserInfo: PersonInterface = JSON.parse(localStorage.getItem('UserInfo') || '{}');
   loaded = false;
-  UserID;
-  //categories: resultsCategories = JSON.parse(localStorage.getItem('categories'))
-  //subCategoris: resultsSubCategories = JSON.parse(localStorage.getItem('subCategoris'))
+  UserID: any;
+  //categories: resultsCategories = JSON.parse(localStorage.getItem('categories') || '{}')
+  //subCategoris: resultsSubCategories = JSON.parse(localStorage.getItem('subCategoris') || '{}')
   PersonaInfoLoaded = false;
 
-  Intressens:Observable<intressensInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Intressens'));
-  Kompetenser_intygs:Observable<kompetenserInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Kompetenser_intygs'));
-  Erfarenhets:Observable<erfarenhetsInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Erfarenhets'));
-  Studiers:Observable<studiersInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Studiers'));
+  Intressens:Observable<intressensInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Intressens') || '{}');
+  Kompetenser_intygs:Observable<kompetenserInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Kompetenser_intygs') || '{}');
+  Erfarenhets:Observable<erfarenhetsInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Erfarenhets') || '{}');
+  Studiers:Observable<studiersInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Studiers') || '{}');
 
   profileDictionary = {
     SERVER_URL: environment.SERVER_URL,
@@ -59,7 +59,7 @@ export class ProfileComponent implements OnInit {
     await this.delay(4);
 
     this.http.get(environment.SERVER_URL + 'api/allprofileinfo/' + this.profileDictionary.currentUsername,{ headers: this.httpHeaders })
-    .subscribe((datauserInfo: Observable<PersonInterface>) => {
+    .subscribe((datauserInfo: any) => {
 
       console.log(datauserInfo)
       this.profileDictionary.userInfo = datauserInfo
@@ -75,7 +75,7 @@ export class ProfileComponent implements OnInit {
       sessionStorage.setItem(this.profileDictionary.currentUsername + 'Intressens', JSON.stringify(datauserInfo['Intressen']));
       this.spinnerService.requestEnded();
     });
-    this.UserID = JSON.parse(sessionStorage.getItem(this.currentUsername + 'UserInfo'));
+    this.UserID = JSON.parse(sessionStorage.getItem(this.currentUsername + 'UserInfo') || '{}');
 
     this.profileDictionary.PersonaInfoLoaded = true
     this.profileDictionary.loaded = true

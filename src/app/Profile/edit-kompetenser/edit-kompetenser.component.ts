@@ -18,7 +18,7 @@ export interface Kompetens {
 export class EditKompetenserComponent implements OnInit {
 
 
-  
+
   visible = true;
   selectable = true;
   removable = true;
@@ -26,10 +26,10 @@ export class EditKompetenserComponent implements OnInit {
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   constructor(private http: HttpClient,@Inject(MAT_DIALOG_DATA) public profileDictionary: any,public dialogRef: MatDialogRef<EditKompetenserComponent>,) { }
   authenticateHttpHeaders = new HttpHeaders({ 'Authorization': 'Token ' + localStorage.getItem('userToken') });
-  userInfo= JSON.parse(localStorage.getItem('UserInfo'));
+  userInfo= JSON.parse(localStorage.getItem('UserInfo') || '{}');
   public Kompetenser_intygsName:any;
 
-  add(event: MatChipInputEvent): void {
+  add(event: any): any {
     const input = event.input;
     const value = event.value;
 
@@ -37,7 +37,7 @@ export class EditKompetenserComponent implements OnInit {
     if ((value || '').trim()) {
       if (this.profileDictionary.profileDictionary.Kompetenser_intygs === null) {
         this.profileDictionary.profileDictionary.Kompetenser_intygs=[]
-      
+
     }
       //console.log(this.profileDictionary.profileDictionary.Kompetenser_intygs.results)
 
@@ -59,7 +59,7 @@ export class EditKompetenserComponent implements OnInit {
 
   }
 
-  remove(Kompetenser_intygs): void {
+  remove(Kompetenser_intygs:any): void {
     //console.log(this.profileDictionary.profileDictionary.Kompetenser_intygs)
 
     this.http.delete(environment.SERVER_URL + 'api/profile/Kompetenser_intyg/'+Kompetenser_intygs.id+"", { headers: this.authenticateHttpHeaders }).subscribe(returenedData => {
@@ -77,7 +77,7 @@ export class EditKompetenserComponent implements OnInit {
   }
 
 
- 
+
 
   ngOnInit(): void {
   }

@@ -7,7 +7,7 @@ import { EditKompetenserComponent } from '../edit-kompetenser/edit-kompetenser.c
   styleUrls: ['./competencies.component.css']
 })
 export class CompetenciesComponent implements OnInit {
-  @Input() profileDictionary;
+  @Input() profileDictionary:any;
   Kompetenser_intygs;
 
   constructor() { }
@@ -22,8 +22,8 @@ export class CompetenciesComponent implements OnInit {
        data: {
          profileDictionary:this.profileDictionary
        }});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
 }

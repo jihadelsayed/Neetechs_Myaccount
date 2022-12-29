@@ -7,8 +7,8 @@ import { EditErfarenhetComponent } from '../edit-erfarenhet/edit-erfarenhet.comp
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-  @Input() profileDictionary;
-  Erfarenhets;
+  @Input() profileDictionary:any;
+  Erfarenhets:any;
 
   constructor() { }
 
@@ -16,8 +16,8 @@ export class ExperienceComponent implements OnInit {
     this.Erfarenhets = this.profileDictionary.Erfarenhets
 
   }
-  
-  openDialogEditErfarenhet(experience) {
+
+  openDialogEditErfarenhet(experience:any) {
     const edit = true
     const dialogRef = this.profileDictionary.dialog.open(EditErfarenhetComponent,{
       width: '1000px',
@@ -27,9 +27,9 @@ export class ExperienceComponent implements OnInit {
         edit:edit,
         experience:experience,
       }});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
   openDialogAddErfarenhet() {
     const edit = false
@@ -40,8 +40,8 @@ export class ExperienceComponent implements OnInit {
         profileDictionary:this.profileDictionary,
         edit:edit
       }});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
 }

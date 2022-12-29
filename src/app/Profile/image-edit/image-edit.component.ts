@@ -18,8 +18,8 @@ picture:any
 
   }
   imageFile:any;
-  showPreview(event) {
-    this.imageFile = (event.target as HTMLInputElement).files[0];
+  showPreview(event:any) {
+    this.imageFile = (event.target as any).files[0];
     // File Preview
     const reader = new FileReader();
     reader.onload = () => {

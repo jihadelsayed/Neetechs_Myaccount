@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   SERVER_URL = environment.SERVER_URL_WITH_OUT_SLASH
 
   userInfo = JSON.parse(localStorage.getItem('UserInfo')!);
-  unReedMessages: Observable<any> = JSON.parse(localStorage.getItem('unReedMessages')!) || []
+  unReedMessages: any = JSON.parse(localStorage.getItem('unReedMessages')!) || []
   messageBadge = 0
   notifications = 15;
   constructor(

@@ -8,7 +8,7 @@ import { EditPersronUppgifterComponent } from '../edit-persron-uppgifter/edit-pe
   styleUrls: ['./personal-info.component.css']
 })
 export class PersonalInfoComponent implements OnInit {
-  @Input() profileDictionary;
+  @Input() profileDictionary:any;
 
   constructor() { }
 
@@ -19,13 +19,13 @@ export class PersonalInfoComponent implements OnInit {
   openDialogEditPersonUppgifter() {
     const dialogRef = this.profileDictionary.dialog.open(EditPersronUppgifterComponent,{
       width: '1000px',
-      
+
       // height: '400px',
        data: {
          profileDictionary:this.profileDictionary
        }});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
 }

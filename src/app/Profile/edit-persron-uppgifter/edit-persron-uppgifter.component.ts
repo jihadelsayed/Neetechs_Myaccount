@@ -41,14 +41,14 @@ export class EditPersronUppgifterComponent implements OnInit {
     );
   }
 
-  private city_filter(value: string): string[] {
+  private city_filter(value: any): any[] {
     console.log(this.state)
 
     const filterValue = value.toString().substring(2,4);
     return this.stateOptions.filter(option => option.id.toString().substring(0,2).includes(filterValue));
   }
 
-  twitter
+  twitter:any;
 
   OnSubmit(){
     const profileData= new FormData();

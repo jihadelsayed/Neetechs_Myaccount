@@ -11,7 +11,7 @@ export class DeleteAccountComponent implements OnInit {
 
   authenticateHttpHeaders = new HttpHeaders({ 'Authorization': 'Token ' + localStorage.getItem('userToken') });
   status: string;
-  userInfo= JSON.parse(localStorage.getItem('UserInfo'));
+  userInfo= JSON.parse(localStorage.getItem('UserInfo') || '{}');
 
   constructor(private http: HttpClient) { }
 

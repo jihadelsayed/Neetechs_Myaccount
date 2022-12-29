@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class StudyComponent implements OnInit {
 
   constructor(public dialog: MatDialog,private router: ActivatedRoute) { }
-  @Input() profileDictionary;
+  @Input() profileDictionary:any;
  // Kompetenser_intygs;
 
   Studiers= "";
@@ -33,9 +33,9 @@ export class StudyComponent implements OnInit {
          profileDictionary:this.profileDictionary,
          edit:edit
        }});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
   openDialogEditStudier(study:any) {
     const edit = true

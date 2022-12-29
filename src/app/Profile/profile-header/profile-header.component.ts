@@ -11,7 +11,7 @@ import { ImageEditComponent } from '../image-edit/image-edit.component';
 })
 export class ProfileHeaderComponent implements OnInit {
   SERVER_URL = environment.SERVER_URL_WITH_OUT_SLASH
-  @Input() profileDictionary;
+  @Input() profileDictionary:any;
   DATAstring = "";
   constructor(private route: Router ,) {
 
@@ -26,9 +26,9 @@ export class ProfileHeaderComponent implements OnInit {
     console.log(this.profileDictionary.userInfo.site_id)
     console.log(this.profileDictionary.currentUsername)
     const dialogRef = this.profileDictionary.dialog.open(DeleteAccountComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
   GoToChatPage() {
     //if (site_id !== threadName){
@@ -46,9 +46,9 @@ export class ProfileHeaderComponent implements OnInit {
        data: {
         profileDictionary:this.profileDictionary,
        }});
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
 
 }

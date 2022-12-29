@@ -102,7 +102,7 @@ export class EditErfarenhetComponent implements OnInit {
   }
   authenticateHttpHeaders = new HttpHeaders({ 'Authorization': 'Token ' + localStorage.getItem('userToken') });
 
-  userInfo= JSON.parse(localStorage.getItem('UserInfo'));
+  userInfo= JSON.parse(localStorage.getItem('UserInfo') || '{}');
   public checkedDate:boolean = false;
   public edit:boolean = this.profileDictionary.edit;
   public id:any
