@@ -58,8 +58,8 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
-            //"ngswConfigPath": "ngsw-config.json"
+            "scripts": [],
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "es":{
