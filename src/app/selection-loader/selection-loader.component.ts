@@ -13,7 +13,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SelectionLoaderComponent implements OnInit {
   @Input() Cwidth: any;
   @Input() Cheight: any;
-  @Input() circle: boolean | undefined;
+  @Input() circle: any;
 
   constructor() { }
 

@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { UserProfileService } from 'src/app/AngularServices/user-profile.service';
+import { UserProfileService } from 'src/services/auth/user-profile.service';
 
 @Component({
   selector: 'app-image-edit',

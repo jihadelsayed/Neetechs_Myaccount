@@ -5,7 +5,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { distinctUntilChanged, map, startWith } from 'rxjs/operators';
 import { LanKommun } from 'src/environments/state';
-import { UserProfileService } from 'src/app/AngularServices/user-profile.service';
+import { UserProfileService } from 'src/services/auth/user-profile.service';
 
 
 
@@ -47,7 +47,7 @@ export class EditPersronUppgifterComponent implements OnInit {
     const filterValue = value.toString().substring(2,4);
     return this.stateOptions.filter(option => option.id.toString().substring(0,2).includes(filterValue));
   }
-  
+
   twitter
 
   OnSubmit(){

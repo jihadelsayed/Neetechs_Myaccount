@@ -54,8 +54,8 @@ export const MY_FORMATS = {
 export class EditErfarenhetComponent implements OnInit {
 
 
-  starteddate = new FormControl(moment());
-  endeddate = new FormControl(moment());
+  starteddate:any = new FormControl(moment());
+  endeddate:any = new FormControl(moment());
 
   startedChosenYearHandler(normalizedYear: Moment) {
     const ctrlValue = this.starteddate.value;
@@ -113,7 +113,7 @@ export class EditErfarenhetComponent implements OnInit {
   OnAdd(){
     console.log(this.starteddate)
     //{{ experience.started_at['month']}}+{{experience.started_at['year'] }} -- >{{ experience.ended_at['month']}}+{{experience.ended_at['year'] }} . {{ experience.ended_at['year']-experience.started_at['year'] }} år
-    const starteddate = this.starteddate.value._d.month + this.starteddate.value._d.year
+    const starteddate = this.starteddate.value['_d'].month + this.starteddate.value['_d'].year
     const serviceData= new FormData();
     serviceData.append('name', this.name);
     serviceData.append('company', this.company);
@@ -123,7 +123,7 @@ export class EditErfarenhetComponent implements OnInit {
     serviceData.append('username', this.userInfo.id);
 
     if (this.checkedDate== false){
-      const endeddate = "--" + this.endeddate.value._d.month + this.endeddate.value._d.year + "." + (this.starteddate.value._d.year - this.endeddate.value._d.year) + "år"
+      const endeddate = "--" + this.endeddate.value['_d'].month + this.endeddate.value['_d'].year + "." + (this.starteddate.value['_d'].year - this.endeddate.value['_d'].year) + "år"
       console.log(starteddate +  endeddate)
       serviceData.append('ended_at', endeddate);
     }
@@ -143,19 +143,19 @@ export class EditErfarenhetComponent implements OnInit {
     this.profileDictionary.experience.company= this.company;
     this.profileDictionary.experience.plats= this.plats;
     this.profileDictionary.experience.content= this.content;
-    this.profileDictionary.experience.started_at= this.starteddate.value._d.month+"/"+this.starteddate.value._d.year;
-    this.profileDictionary.experience.ended_at= this.endeddate.value._d.month+"/"+this.endeddate.value._d.year;
+    this.profileDictionary.experience.started_at= this.starteddate.value['_d'].month+"/"+this.starteddate.value['_d'].year;
+    this.profileDictionary.experience.ended_at= this.endeddate.value['_d'].month+"/"+this.endeddate.value['_d'].year;
 
     const serviceData= new FormData();
     serviceData.append('name', this.name);
     serviceData.append('company', this.company);
     serviceData.append('plats', this.plats);
     serviceData.append('content', this.content);
-    serviceData.append('started_at', JSON.stringify(this.starteddate.value._d));
+    serviceData.append('started_at', JSON.stringify(this.starteddate.value['_d']));
     serviceData.append('username', this.userInfo.id);
 
     if (this.checkedDate== false){
-      serviceData.append('ended_at', JSON.stringify(this.endeddate.value._d));
+      serviceData.append('ended_at', JSON.stringify(this.endeddate.value['_d']));
     }
 
     this.http.put(environment.SERVER_URL + 'api/profile/Erfarenhet/'+this.id+"/", serviceData, { headers: this.authenticateHttpHeaders }).subscribe(returenedData => {
