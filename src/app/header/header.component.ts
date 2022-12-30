@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   SERVER_URL = environment.SERVER_URL_WITH_OUT_SLASH
 
-  userInfo = JSON.parse(localStorage.getItem('UserInfo')!);
+  userInfo: any = JSON.parse(localStorage.getItem('UserInfo')!);
   unReedMessages: any = JSON.parse(localStorage.getItem('unReedMessages')!) || []
   messageBadge = 0
   notifications = 15;
@@ -45,7 +45,7 @@ export class HeaderComponent implements OnInit {
     //   });
     // }
   }
-  userExist: boolean | undefined;
+  userExist: boolean = false;
   ngOnInit() {
     if (localStorage.getItem("userToken")) {
       this.messageBadge = this.unReedMessages['length']

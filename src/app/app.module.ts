@@ -36,27 +36,10 @@ import { LoginMenuComponent } from './header/login-menu/login-menu.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { SearchMenuComponent } from './header/search-menu/search-menu.component';
 
-
-
-import { AboutComponent } from './Profile/about/about.component';
-import { CompetenciesComponent } from './Profile/competencies/competencies.component';
-import { DeleteAccountComponent } from './Profile/delete-account/delete-account.component';
-import { EditErfarenhetComponent } from './Profile/edit-erfarenhet/edit-erfarenhet.component';
-import { EditIntressenComponent } from './Profile/edit-intressen/edit-intressen.component';
-import { EditKompetenserComponent } from './Profile/edit-kompetenser/edit-kompetenser.component';
-import { EditOMComponent } from './Profile/edit-om/edit-om.component';
-import { EditPersronUppgifterComponent } from './Profile/edit-persron-uppgifter/edit-persron-uppgifter.component';
-import { EditStudierComponent } from './Profile/edit-studier/edit-studier.component';
-import { ExperienceComponent } from './Profile/experience/experience.component';
-import { ImageEditComponent } from './Profile/image-edit/image-edit.component';
-import { InterestsComponent } from './Profile/interests/interests.component';
-import { PersonalInfoComponent } from './Profile/personal-info/personal-info.component';
-import { ProfileHeaderComponent } from './Profile/profile-header/profile-header.component';
-import { ProfileComponent } from './Profile/profile/profile.component';
-import { StudyComponent } from './Profile/study/study.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AvatarModule } from 'ngx-avatar';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -64,29 +47,13 @@ import { AvatarModule } from 'ngx-avatar';
     UserNotificationsMenuComponent,
     // profile
 
-    EditOMComponent,
-    EditPersronUppgifterComponent,
-    EditErfarenhetComponent,
-    EditStudierComponent,
-    EditKompetenserComponent,
-    EditIntressenComponent,
-    DeleteAccountComponent,
-    PersonalInfoComponent,
-    CompetenciesComponent,
-    StudyComponent,
-    InterestsComponent,
-    ExperienceComponent,
-    ProfileComponent,
-    AboutComponent,
-    ProfileHeaderComponent,
-    //ProfileServicesComponent,
-    ImageEditComponent,
     AppComponent,
     HeaderComponent,
     SpinnerComponent,
     LoginMenuComponent,
     MenuComponent,
     SearchMenuComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -100,7 +67,6 @@ import { AvatarModule } from 'ngx-avatar';
     BrowserAnimationsModule,
 
     ReactiveFormsModule,
-    // FlexLayoutModule,
     SelectionLoaderModule,
     //ToastrModule.forRoot(),
     //

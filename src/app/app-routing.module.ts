@@ -1,12 +1,12 @@
+import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from 'src/services/auth/auth.guard';
 import { NotAuthGuard } from 'src/services/auth/not-auth.guard';
-import { ProfileComponent } from './Profile/profile/profile.component';
+
 
 const routes: Routes = [
-  { path:'Profile/:username',component: ProfileComponent,canActivate:[AuthGuard]},
-
+  { path:'',component: HomeComponent,canActivate:[AuthGuard]},
 
 ];
 
