@@ -1,5 +1,8 @@
+import { Title } from '@angular/platform-browser';
 import { environment } from 'src/environments/environment';
-import { Component } from '@angular/core';
+
+import { Component, Inject, LOCALE_ID } from '@angular/core';
+import { StyleModeService } from './header/style-mode.service';
 
 @Component({
   selector: 'app-root',
@@ -7,32 +10,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'neetechs';
+  title = 'NeeTechs';
   LoginURL = environment.LoginURL;
-
-  frameSrc:any;
-  constructor(){}
-    ngOnInit() {
-      // Authorization
-      if (localStorage.getItem("userToken") == null) {
-        (window.top as any).addEventListener("message", (event:any) => {
-          if (localStorage.getItem("userToken") == null) {
-            if (event.origin === "http://localhost:4200/" || event.origin === "https://neetechs.web.app/"|| event.origin === "https://neetechs.com/") {
-              return;
-            } else {
-              if (event.data['type'] === "credential") {
-                if (event.data.getToken !== 'undefined') {
-                  localStorage.setItem("userToken", event.data.getToken)
-                  localStorage.setItem("UserInfo", event.data.getUserInfo)
-                }
-              }
-            }
-          }
-        }, false);
-      }
-      this.frameSrc= this.LoginURL+ window.navigator.language.substring(0, 2)+"/#/getCredential"+"?"+ "host="+ window.location.href+"&"+"language="+ window.navigator.language +"&" + "pathname="+window.location.pathname;
-      (document.getElementById('iframeAccount')as any)["src"] = this.frameSrc;
-      console.log(this.frameSrc)
-    }
-
+  constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService,private titleService: Title){
+    this.titleService.setTitle($localize`${this.title}`,);
+  }
+  ngOnInit(): void {
+    console.log(environment)
+  }
 }
+

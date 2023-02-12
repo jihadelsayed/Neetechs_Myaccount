@@ -1,12 +1,17 @@
 import { HomeComponent } from './home/home.component';
+import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from 'src/services/auth/auth.guard';
-import { NotAuthGuard } from 'src/services/auth/not-auth.guard';
 
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NotAuthGuard } from './authorization/services/not-auth.guard';
 
 const routes: Routes = [
-  { path:'',component: HomeComponent,canActivate:[AuthGuard]},
+  // authentication component
+  //{ path:'',component: HomeComponent,canActivate:[NotAuthGuard] },
+  //{ path:'', pathMatch:'full', redirectTo:'home' ,component: AppComponent,canActivate:[AuthGuard] },
+  { path:'home' ,component: HomeComponent },
+  { path:'**',component: HomeComponent },
 
 ];
 
@@ -14,4 +19,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy',useHash: true })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}
