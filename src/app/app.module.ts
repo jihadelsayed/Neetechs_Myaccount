@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -30,30 +29,34 @@ import { SpinnerComponent } from './spinner/spinner.component';
 
 //import { EchartsxModule } from 'echarts-for-angular';
 
-import { UserMenuComponent } from './header/user-menu/user-menu.component';
-import { UserNotificationsMenuComponent } from './header/user-notifications-menu/user-notifications-menu.component';
-import { LoginMenuComponent } from './header/login-menu/login-menu.component';
-import { MenuComponent } from './header/menu/menu.component';
-import { SearchMenuComponent } from './header/search-menu/search-menu.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AvatarModule } from 'ngx-avatar';
+// import { AvatarModule } from 'ngx-avatar';
 import { HomeComponent } from './home/home.component';
+// header
+import { HeaderComponent } from './header/header.component';
+import { LoginMenuComponent } from './header/login-menu/login-menu.component';
+import { MenuComponent } from './header/menu/menu.component';
+import { SearchMenuComponent } from './header/search-menu/search-menu.component';
+import { UserMenuComponent } from './header/user-menu/user-menu.component';
+import { UserNotificationsMenuComponent } from './header/user-notifications-menu/user-notifications-menu.component';
 
 @NgModule({
   declarations: [
+    // profile
+    AppComponent,
+    SpinnerComponent,
+    HomeComponent,
+
+    // header component
+    HeaderComponent,
+    LoginMenuComponent,
     UserMenuComponent,
     UserNotificationsMenuComponent,
-    // profile
-
-    AppComponent,
-    HeaderComponent,
-    SpinnerComponent,
-    LoginMenuComponent,
     MenuComponent,
     SearchMenuComponent,
-    HomeComponent,
+
 
   ],
   imports: [
@@ -74,7 +77,7 @@ import { HomeComponent } from './home/home.component';
     //
     //
     //
-    AvatarModule,
+    //AvatarModule,
     // StripeModule.forRoot(""),
     // ServiceWorkerModule.register('ngsw-worker.js', {
     //   enabled: environment.production,
