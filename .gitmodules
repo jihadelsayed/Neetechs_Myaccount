@@ -7,3 +7,6 @@
 [submodule "src/app/header"]
 	path = src/app/header
 	url = https://github.com/davidpales1/header.git
+[submodule "src/app/spinner"]
+	path = src/app/spinner
+	url = https://github.com/davidpales1/spinner.git

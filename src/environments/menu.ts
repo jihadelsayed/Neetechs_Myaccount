@@ -1,7 +1,7 @@
 export const menu = [
-  {
-    id: 1,
-    title: "ai",
-    routerLink: "ai",
-  },
+  // {
+  //   id: 1,
+  //   title: "ai",
+  //   routerLink: "ai",
+  // },
 ]

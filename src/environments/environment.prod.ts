@@ -18,7 +18,7 @@ export const environment = {
   // LoginURL: "http://localhost:4442/",
   MainDomain: window.location.hostname,
   //MainDomain: window.location.hostname.replace(/^[^.]+./, ''),
-  LoginURL: "https://accounts." + window.location.hostname +"/",
+  LoginURL: "https://accounts." + window.location.hostname.split(".")[1]+"."+window.location.hostname.split(".")[2] +"/",
   //LoginURL: "https://accounts.theislamicnation.com/",
 };
 
