@@ -1,4 +1,4 @@
-<div>            
+<div>
   <div class="rowContant">
     <div fxLayout="row" fxLayoutGap="10px">
       <div fxLayout="column" fxFlex=50>
@@ -7,7 +7,7 @@
           <mat-select [formControl]="stateControl" required [(ngModel)]="this.profileDictionary.userInfo.state">
             <mat-option>--</mat-option>
             <div *ngFor="let Lan of LanKommun" >
-            <mat-option [value]="Lan.title" *ngIf="Lan.type =='L'">{{Lan.title}}</mat-option>
+            <mat-option [value]="Lan.title" *ngIf="Lan.type =='L'">{{Lan['title']}}</mat-option>
             </div>
           </mat-select>
           <mat-error *ngIf="stateControl.hasError('required')">Vänligen välja ett länt</mat-error>
@@ -18,7 +18,7 @@
           <mat-form-field class="example-full-width" appearance="outline" >
             <mat-select [(ngModel)]="this.profileDictionary.userInfo.city">
               <div *ngFor="let option of filteredCityOptions | async" >
-                <mat-option [value]="option.title" *ngIf="option.type =='K'">{{option.title}}</mat-option>
+                <mat-option [value]="option['title']" *ngIf="option['type'] =='K'">{{option['title']}}</mat-option>
               </div>
             </mat-select>
           </mat-form-field>

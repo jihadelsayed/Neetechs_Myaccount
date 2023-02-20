@@ -17,7 +17,7 @@
           <div fxLayout="row" class="rowcontent"  fxLayoutAlign="space-around center" *ngFor="let experience of this.profileDictionary.Erfarenhets">
 
             <div fxLayout="column" fxFlex=10>
-              <ngx-avatar size="100"  class="imgProfile" name="{{ experience.name }}"></ngx-avatar>
+              <div  mat-card-avatar size="100"  class="imgProfile" >{{ experience.name }}</div>
 
               <!-- <img class="imgProfile" src="{{ SERVER_URL }}{{ kompo.img }}" alt="there is no image"> -->
 

@@ -1,3 +1,7 @@
+# important package
+npm i ngx-avatar --save
+npm i @angular/flex-layout --save
+npm i @angular/material-moment-adapter --save --force
 # Neetechs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.

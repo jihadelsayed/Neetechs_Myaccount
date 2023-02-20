@@ -1,7 +1,6 @@
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
-import { MatChipInputEvent } from '@angular/material/chips';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { environment } from 'src/environments/environment';
 
@@ -18,7 +17,7 @@ export interface Kompetens {
 export class EditKompetenserComponent implements OnInit {
 
 
-  
+
   visible = true;
   selectable = true;
   removable = true;
@@ -29,7 +28,7 @@ export class EditKompetenserComponent implements OnInit {
   userInfo= JSON.parse(localStorage.getItem('UserInfo'));
   public Kompetenser_intygsName:any;
 
-  add(event: MatChipInputEvent): void {
+  add(event: any): void {
     const input = event.input;
     const value = event.value;
 
@@ -37,7 +36,7 @@ export class EditKompetenserComponent implements OnInit {
     if ((value || '').trim()) {
       if (this.profileDictionary.profileDictionary.Kompetenser_intygs === null) {
         this.profileDictionary.profileDictionary.Kompetenser_intygs=[]
-      
+
     }
       //console.log(this.profileDictionary.profileDictionary.Kompetenser_intygs.results)
 
@@ -77,7 +76,7 @@ export class EditKompetenserComponent implements OnInit {
   }
 
 
- 
+
 
   ngOnInit(): void {
   }

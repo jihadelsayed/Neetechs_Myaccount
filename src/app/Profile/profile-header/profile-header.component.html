@@ -4,9 +4,9 @@
     <div fxLayout=row>
 
     <div class="imageCont" *ngIf="profileDictionary.userInfo['picture'] && profileDictionary.userInfo['picture'] !== ''">
-      <app-selection-loader *ngIf="!profileDictionary.PersonaInfoLoaded" Cheight="100" Cwidth="100" circle=True></app-selection-loader>
+      <app-selection-loader *ngIf="!profileDictionary.PersonaInfoLoaded" Cheight="100" Cwidth="100" circle=true></app-selection-loader>
 
-      <img class="imgProfile" *ngIf="profileDictionary.PersonaInfoLoaded" src="{{ this.SERVER_URL }}{{this.profileDictionary.userInfo['picture']}}">
+      <img title="image" class="imgProfile" *ngIf="profileDictionary.PersonaInfoLoaded" src="{{ this.SERVER_URL }}{{this.profileDictionary.userInfo['picture']}}">
       <button mat-icon-button class="btnEdit" (click)="openDialogEditPersonImage()">
         <mat-icon>camera_enhance</mat-icon>
       </button>
@@ -21,13 +21,13 @@
 
     <div class="mat-subheading-1 titelName">
       <app-selection-loader *ngIf="!profileDictionary.PersonaInfoLoaded" Cheight="100" Cwidth="100" ></app-selection-loader>
-      <div *ngIf="profileDictionary.PersonaInfoLoaded">    
+      <div *ngIf="profileDictionary.PersonaInfoLoaded">
 
       {{ profileDictionary.userInfo.profession }} Utvekclare</div></div>
   </div>
   <div class="mat-subheading-1 datum" fxLayout=row>
     <app-selection-loader *ngIf="!profileDictionary.PersonaInfoLoaded" Cheight="100" Cwidth="100" ></app-selection-loader>
-<div *ngIf="profileDictionary.PersonaInfoLoaded">    
+<div *ngIf="profileDictionary.PersonaInfoLoaded">
   {{ profileDictionary.userInfo.member_since }}
 </div>
   </div>
@@ -45,10 +45,10 @@
         <div fxLayout=column fxFlex=33>
 
           <button mat-stroked-button class="btnUserTjanster" routerLink="/Profile/{{ profileDictionary.currentUsername }}/profileServices/">
-            <mat-icon>store</mat-icon> 
+            <mat-icon>store</mat-icon>
             <span *ngIf="this.profileDictionary.userInfo.site_id != this.profileDictionary.LogedInUserInfo.site_id">{{this.profileDictionary.userInfo.first_name}}</span>
             <span *ngIf="this.profileDictionary.userInfo.site_id == this.profileDictionary.LogedInUserInfo.site_id">Mina</span>
-            tjänster 
+            tjänster
           </button>
 
         </div>
@@ -56,7 +56,7 @@
           <div fxLayout=column fxFlex=33 *ngIf="this.profileDictionary.userInfo.site_id == this.profileDictionary.LogedInUserInfo.site_id">
 
             <button mat-stroked-button class="btnDelete" (click)="openDialogDeleteAccount()">
-              <mat-icon>delete</mat-icon> Avsluta ditt konto 
+              <mat-icon>delete</mat-icon> Avsluta ditt konto
             </button>
 
           </div>

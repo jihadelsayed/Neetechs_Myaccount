@@ -21,6 +21,9 @@ import { UserNotificationsMenuComponent } from './header/user-notifications-menu
 import { MenuComponent } from './header/menu/menu.component';
 import { SearchMenuComponent } from './header/search-menu/search-menu.component';
 import { MaterialModule } from './material';
+import { ReactiveFormsModule } from '@angular/forms';
+
+// spinner
 import { SpinnerComponent } from './spinner/spinner.component';
 
 /// profiles imports
@@ -45,6 +48,10 @@ import { ProfileHeaderComponent } from './Profile/profile-header/profile-header.
 import { ProfileComponent } from './Profile/profile/profile.component';
 import { StudyComponent } from './Profile/study/study.component';
 
+import { SelectionLoaderModule } from './spinner/selection-loader/selection-loader.module';
+import { EditOMComponent } from './Profile/edit-om/edit-om.component';
+
+//import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -72,7 +79,7 @@ import { StudyComponent } from './Profile/study/study.component';
     DeleteAccountComponent,
     PersonalInfoComponent,
     CompetenciesComponent,
-
+    EditOMComponent,
     InterestsComponent,
     ExperienceComponent,
     ProfileComponent,
@@ -85,15 +92,25 @@ import { StudyComponent } from './Profile/study/study.component';
     CompleteLocationComponent,
     CompleteAboutComponent,
     EditPersronUppgifterComponent,
-    StudyComponent
+    StudyComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+
+
+    // spinner
+    SelectionLoaderModule,
+
+    // flex
+    //FlexLayoutModule,
+
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },NotAuthGuard,AuthGuard],
   bootstrap: [AppComponent]

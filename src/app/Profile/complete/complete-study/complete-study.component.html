@@ -15,9 +15,9 @@
   <div class="rowcontent" fxLayout="row" fxLayoutAlign="space-around center" *ngFor="let study of this.profileDictionary.Studiers">
     <div fxLayout="column" fxFlex=10>
 
-      <ngx-avatar  size="100" 
+      <div  mat-card-avatar  size="100"
 
-       class="imgProfile" name="{{ study.name }}"></ngx-avatar>
+       class="imgProfile" >{{ study.name }}</div>
 
 
     </div>
@@ -41,7 +41,7 @@
 
     </div>
 
-    
+
     <div fxLayout="column" fxFlex=5>
       <button class="btnEdit" mat-mini-fab aria-label="Example icon button with a home icon" (click)="openDialogEditStudier(study)">
         <mat-icon>edit</mat-icon>

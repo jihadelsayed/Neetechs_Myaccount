@@ -28,8 +28,8 @@ export class EditIntressenComponent implements OnInit {
   authenticateHttpHeaders = new HttpHeaders({ 'Authorization': 'Token ' + localStorage.getItem('userToken') });
   userInfo= JSON.parse(localStorage.getItem('UserInfo'));
   public IntressenName:any;
-  
-  add(event: MatChipInputEvent): void {
+
+  add(event: any): void {
     const input = event.input;
     const value = event.value;
 
@@ -39,7 +39,7 @@ export class EditIntressenComponent implements OnInit {
     if ((value || '').trim()) {
       if (this.profileDictionary.profileDictionary.Intressens === null) {
         this.profileDictionary.profileDictionary.Intressens=[]
-      
+
     }
     //console.log(this.profileDictionary.profileDictionary.Intressens.results)
 
@@ -54,7 +54,7 @@ export class EditIntressenComponent implements OnInit {
           this.profileDictionary.profileDictionary.Intressens.push({id:returenedData['id'],name: value.trim(),username:this.userInfo.id,site_id:this.userInfo.site_id});
         //}
         sessionStorage.setItem(this.profileDictionary.profileDictionary.currentUsername + 'Intressens', JSON.stringify(this.profileDictionary.profileDictionary.Intressens));
- 
+
       });
           // Reset the input value
       if (input) {
@@ -74,10 +74,10 @@ export class EditIntressenComponent implements OnInit {
 
       if (index >= 0) {
         this.profileDictionary.profileDictionary.Intressens.splice(index, 1);
-  
+
       }
       sessionStorage.setItem(this.profileDictionary.profileDictionary.currentUsername + 'Intressens', JSON.stringify(this.profileDictionary.profileDictionary.Intressens));
-  
+
     });
   }
   ngOnInit(): void {

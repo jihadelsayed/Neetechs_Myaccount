@@ -1,6 +1,6 @@
 <p>image-edit works!</p>
 <div class="imgProfile" *ngIf="this.picture && this.picture !== ''">
-    <img [src]="this.picture"  width="100px" height="100px">
+    <img title="image" [src]="this.picture"  width="100px" height="100px">
   </div>
 
   <div class="container">
@@ -13,4 +13,3 @@
   <button mat-raised-button color="warn" class="btnSpara" (click)="uploadImage()">Spara</button>
 
 
-  

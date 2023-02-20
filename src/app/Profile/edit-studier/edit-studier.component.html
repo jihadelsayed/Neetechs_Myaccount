@@ -53,7 +53,8 @@
           <mat-label>Från</mat-label>
           <mat-select matNativeControl required [(ngModel)]="started_at">
             <mat-option>--</mat-option>
-            <mat-option *ngFor="let year of years" value="{{year}}">{{year}}</mat-option>
+            <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
+
           </mat-select>
         </mat-form-field>
 

@@ -15,12 +15,12 @@ export class CompleteLocationComponent implements OnInit {
   @Input() profileDictionary;
   StateSelectedValue: string;
   constructor(private UserProfileService:UserProfileService) { }
-  LanKommun = LanKommun
-  Kommun = LanKommun
+  LanKommun:any = LanKommun
+  Kommun:any = LanKommun
   LanKommun$: Observable<any>;
   stateControl = new FormControl('', Validators.required);
   stateOptions: any[] = LanKommun;
-  filteredCityOptions: Observable<string[]>;
+  filteredCityOptions: Observable<any[]>;
   //stateControl = new FormControl('', Validators.required);
   selectFormControl = new FormControl('--', Validators.required);
   // options: User[] = Kommuner;
