@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UserProfileService } from 'src/app/AngularServices/user-profile.service';
+import { UserProfileService } from '../../user-profile.service';
 @Component({
   selector: 'app-complete-personal-info',
   templateUrl: './complete-personal-info.component.html',

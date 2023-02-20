@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { UserProfileService } from 'src/app/AngularServices/user-profile.service';
+import { UserProfileService } from '../user-profile.service';
 
 @Component({
   selector: 'app-edit-om',

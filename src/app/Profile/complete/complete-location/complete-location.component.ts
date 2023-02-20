@@ -2,10 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { distinctUntilChanged, map, startWith } from 'rxjs/operators';
-import { User } from 'src/app/shared/user.model';
 import { Kommuner } from 'src/environments/kommun';
 import { LanKommun } from 'src/environments/state';
-import { UserProfileService } from 'src/app/AngularServices/user-profile.service';
+import { UserProfileService } from '../../user-profile.service';
 
 @Component({
   selector: 'app-complete-location',
@@ -25,7 +24,7 @@ export class CompleteLocationComponent implements OnInit {
   //stateControl = new FormControl('', Validators.required);
   selectFormControl = new FormControl('--', Validators.required);
   // options: User[] = Kommuner;
-  filteredOptions: Observable<User[]>;
+  filteredOptions: Observable<any[]>;
   ngOnInit(): void {
     this.filteredCityOptions = this.stateControl.valueChanges.pipe(
       startWith(''),

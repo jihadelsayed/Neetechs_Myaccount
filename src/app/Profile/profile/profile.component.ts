@@ -35,7 +35,7 @@ export class ProfileComponent implements OnInit {
   Erfarenhets:Observable<erfarenhetsInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Erfarenhets'));
   Studiers:Observable<studiersInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'Studiers'));
 
-  profileDictionary = {
+  profileDictionary:any = {
     SERVER_URL: environment.SERVER_URL,
     currentUsername: this.currentUsername,
     userInfo: this.userInfo,

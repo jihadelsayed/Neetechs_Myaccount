@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { EditStudierComponent } from '../edit-studier/edit-studier.component';
-import { StudiersService } from '../../../AngularServices/studiers.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import { StudiersService } from './studiers.service';
 
 @Component({
   selector: 'app-study',
@@ -23,7 +23,7 @@ export class StudyComponent implements OnInit {
   async ngOnInit(): Promise<void> {
 
   }
-  
+
   openDialogAddStudier() {
     const edit = false
 
@@ -45,7 +45,7 @@ export class StudyComponent implements OnInit {
       width: '1000px',
       // height: '400px',
        data: {
-         profileDictionary:this.profileDictionary,       
+         profileDictionary:this.profileDictionary,
          edit:edit,
          study:study,
        }});

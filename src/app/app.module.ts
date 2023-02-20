@@ -23,6 +23,30 @@ import { SearchMenuComponent } from './header/search-menu/search-menu.component'
 import { MaterialModule } from './material';
 import { SpinnerComponent } from './spinner/spinner.component';
 
+/// profiles imports
+import { AboutComponent } from './Profile/about/about.component';
+import { CompetenciesComponent } from './Profile/competencies/competencies.component';
+import { CompleteAboutComponent } from './Profile/complete/complete-about/complete-about.component';
+import { CompleteExperienceComponent } from './Profile/complete/complete-experience/complete-experience.component';
+import { CompleteLocationComponent } from './Profile/complete/complete-location/complete-location.component';
+import { CompletePersonalInfoComponent } from './Profile/complete/complete-personal-info/complete-personal-info.component';
+import { CompleteStudyComponent } from './Profile/complete/complete-study/complete-study.component';
+import { DeleteAccountComponent } from './Profile/delete-account/delete-account.component';
+import { EditErfarenhetComponent } from './Profile/edit-erfarenhet/edit-erfarenhet.component';
+import { EditIntressenComponent } from './Profile/edit-intressen/edit-intressen.component';
+import { EditKompetenserComponent } from './Profile/edit-kompetenser/edit-kompetenser.component';
+import { EditPersronUppgifterComponent } from './Profile/edit-persron-uppgifter/edit-persron-uppgifter.component';
+import { EditStudierComponent } from './Profile/edit-studier/edit-studier.component';
+import { ExperienceComponent } from './Profile/experience/experience.component';
+import { ImageEditComponent } from './Profile/image-edit/image-edit.component';
+import { InterestsComponent } from './Profile/interests/interests.component';
+import { PersonalInfoComponent } from './Profile/personal-info/personal-info.component';
+import { ProfileHeaderComponent } from './Profile/profile-header/profile-header.component';
+import { ProfileComponent } from './Profile/profile/profile.component';
+import { StudyComponent } from './Profile/study/study.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +64,28 @@ import { SpinnerComponent } from './spinner/spinner.component';
     // spinner
     SpinnerComponent,
 
+    // profile
+    EditErfarenhetComponent,
+    EditStudierComponent,
+    EditKompetenserComponent,
+    EditIntressenComponent,
+    DeleteAccountComponent,
+    PersonalInfoComponent,
+    CompetenciesComponent,
+
+    InterestsComponent,
+    ExperienceComponent,
+    ProfileComponent,
+    AboutComponent,
+    ProfileHeaderComponent,
+    CompleteStudyComponent,
+    CompleteExperienceComponent,
+    CompletePersonalInfoComponent,
+    ImageEditComponent,
+    CompleteLocationComponent,
+    CompleteAboutComponent,
+    EditPersronUppgifterComponent,
+    StudyComponent
   ],
   imports: [
     BrowserModule,
