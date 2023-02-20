@@ -21,6 +21,7 @@ import { UserNotificationsMenuComponent } from './header/user-notifications-menu
 import { MenuComponent } from './header/menu/menu.component';
 import { SearchMenuComponent } from './header/search-menu/search-menu.component';
 import { MaterialModule } from './material';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,9 @@ import { MaterialModule } from './material';
     UserNotificationsMenuComponent,
     MenuComponent,
     SearchMenuComponent,
+    // spinner
+    SpinnerComponent,
+
   ],
   imports: [
     BrowserModule,

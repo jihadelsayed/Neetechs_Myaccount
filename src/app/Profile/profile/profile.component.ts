@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { resultsCategories, resultsSubCategories } from 'src/app/side-bar-left/categories-interface';
+// import { resultsCategories, resultsSubCategories } from 'src/app/side-bar-left/categories-interface';
 import { SpinnerService } from 'src/app/spinner/spinner.service';
 import { environment } from 'src/environments/environment';
 import { erfarenhetsInterface, intressensInterface, kompetenserInterface, PersonInterface, studiersInterface } from '../profile-interface';
@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
     ) { }
 
   httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
-  
+
   currentUsername = this.router.snapshot.params['username'];
   userInfo: Observable<PersonInterface> = JSON.parse(sessionStorage.getItem(this.currentUsername + 'UserInfo'));
   LogedInUserInfo: PersonInterface = JSON.parse(localStorage.getItem('UserInfo'));
