@@ -39,9 +39,6 @@ export const MY_FORMATS = {
   templateUrl: './edit-erfarenhet.component.html',
   styleUrls: ['./edit-erfarenhet.component.css'],
   providers: [
-    // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
-    // application's root module. We provide it at the component level here, due to limitations of
-    // our example generation script.
     {
       provide: DateAdapter,
       useClass: MomentDateAdapter,
