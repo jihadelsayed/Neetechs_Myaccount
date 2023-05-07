@@ -7,7 +7,7 @@
         <div class="imageCont" *ngIf="profileDictionary.userInfo['picture'] && profileDictionary.userInfo['picture'] !== ''">
           <app-selection-loader *ngIf="!profileDictionary.PersonaInfoLoaded" Cheight="100" Cwidth="100" circle=true></app-selection-loader>
 
-          <img title="image" class="imgProfile" *ngIf="profileDictionary.PersonaInfoLoaded" [src]="SERVER_URL + profileDictionary.userInfo['picture']">
+          <img title="image" class="imgProfile" *ngIf="profileDictionary.PersonaInfoLoaded" [src]="profileDictionary.userInfo['picture']">
           <button mat-icon-button class="btnEdit" (click)="openDialogEditPersonImage()">
             <mat-icon>camera_enhance</mat-icon>
           </button>
