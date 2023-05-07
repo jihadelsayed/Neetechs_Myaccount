@@ -37,7 +37,7 @@ export const MY_FORMATS = {
 @Component({
   selector: 'app-edit-erfarenhet',
   templateUrl: './edit-erfarenhet.component.html',
-  styleUrls: ['./edit-erfarenhet.component.css'],
+  styleUrls: ['./edit-erfarenhet.component.scss'],
   providers: [
     {
       provide: DateAdapter,

@@ -7,7 +7,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
   selector: 'app-edit-studier',
   templateUrl: './edit-studier.component.html',
-  styleUrls: ['./edit-studier.component.css']
+  styleUrls: ['./edit-studier.component.scss']
 })
 export class EditStudierComponent implements OnInit {
 

@@ -1,61 +1,52 @@
+<mat-toolbar class="toolbarTopSection">
 
-          <mat-toolbar class="toolbarTopSection">
+  <div class="mat-headline titelprofileSection flex items-center">Erfarenhet <mat-icon class="ml-2">work</mat-icon></div>
 
-            <div class="mat-headline titelprofileSection">Erfarenhet <mat-icon>work</mat-icon>
-            </div>
+  <span class="flex-1"></span>
 
-            <span class="example-spacer"></span>
+  <button class="btnAdd" mat-mini-fab aria-label="Example icon button with a home icon" (click)="openDialogAddErfarenhet()" *ngIf="this.profileDictionary.userInfo.site_id == this.profileDictionary.LogedInUserInfo.site_id">
+    <mat-icon>add</mat-icon>
+  </button>
 
-            <button class="btnAdd" mat-mini-fab aria-label="Example icon button with a home icon" (click)="openDialogAddErfarenhet()" *ngIf="this.profileDictionary.userInfo.site_id == this.profileDictionary.LogedInUserInfo.site_id">
-              <mat-icon>add</mat-icon>
-            </button>
+</mat-toolbar>
 
-          </mat-toolbar>
+<div class="flex flex-wrap justify-around items-center" *ngFor="let experience of this.profileDictionary.Erfarenhets">
 
+  <div class="flex flex-col flex-shrink-0 w-10">
+    <div mat-card-avatar size="100" class="imgProfile">{{ experience.name }}</div>
+    <!-- <img class="imgProfile" src="{{ SERVER_URL }}{{ kompo.img }}" alt="there is no image"> -->
+  </div>
 
+  <div class="flex flex-col flex-grow w-80">
+    <div class="flex">
+      <div class="mat-h2">{{ experience.name }}</div>
+      <!-- <div class="mat-h2">{{ kompo.content }}</div> -->
+    </div>
 
-          <div fxLayout="row" class="rowcontent"  fxLayoutAlign="space-around center" *ngFor="let experience of this.profileDictionary.Erfarenhets">
+    <div class="flex">
+      <div class="mat-h3">{{ experience.company }}</div>
+      <!-- <div class="mat-h2">{{ kompo.name }}</div> -->
+    </div>
+    <div class="flex">
+      <div class="mat-h4">{{ experience.plats }}</div>
+      <!-- <div class="mat-h3">{{ experience.plats }}</div> -->
+    </div>
+    <div class="flex">
+      <div class="mat-h4">{{ experience.content }}</div>
+      <!-- <div class="mat-h3">{{ experience.plats }}</div> -->
+    </div>
+    <div class="flex">
+      <div class="mat-body"></div>
+      <!-- <div class="mat-body">Mellan {{ kompo.started_at }} och {{ kompo.ended_at }}</div> -->
+    </div>
+  </div>
 
-            <div fxLayout="column" fxFlex=10>
-              <div  mat-card-avatar size="100"  class="imgProfile" >{{ experience.name }}</div>
+  <div class="flex flex-col w-5">
+    <button class="btnEdit" mat-mini-fab aria-label="Example icon button with a home icon" (click)="openDialogEditErfarenhet(experience)" *ngIf="this.profileDictionary.userInfo.site_id == this.profileDictionary.LogedInUserInfo.site_id">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
 
-              <!-- <img class="imgProfile" src="{{ SERVER_URL }}{{ kompo.img }}" alt="there is no image"> -->
+  <div class="flex flex-col w-5"></div>
 
-            </div>
-            <div fxLayout="column" fxFlex=80>
-              <div fxLayout="row">
-                <div class="mat-h2">{{ experience.name }}</div>
-                <!-- <div class="mat-h2">{{ kompo.content }}</div> -->
-              </div>
-
-              <div fxLayout="row">
-                <div class="mat-h3">{{ experience.company }}</div>
-                <!-- <div class="mat-h2">{{ kompo.name }}</div> -->
-              </div>
-              <div fxLayout="row">
-                <div class="mat-h4">{{ experience.plats }}</div>
-                <!-- <div class="mat-h3">{{ experience.plats }}</div> -->
-              </div>
-              <div fxLayout="row">
-                <div class="mat-h4">{{ experience.content }}</div>
-                <!-- <div class="mat-h3">{{ experience.plats }}</div> -->
-              </div>
-              <div fxLayout="row">
-                <div class="mat-body">
-
-                </div>
-                <!-- <div class="mat-body">Mellan {{ kompo.started_at }} och {{ kompo.ended_at
-                  }}
-                </div> -->
-              </div>
-            </div>
-            <div fxLayout="column" fxFlex=5>
-              <button class="btnEdit" mat-mini-fab aria-label="Example icon button with a home icon" (click)="openDialogEditErfarenhet(experience)" *ngIf="this.profileDictionary.userInfo.site_id == this.profileDictionary.LogedInUserInfo.site_id">
-                <mat-icon>edit</mat-icon>
-              </button>
-            </div>
-            <div fxLayout="column" fxFlex=5>
-            </div>
-
-          </div>
-
+</div>

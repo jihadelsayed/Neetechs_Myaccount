@@ -6,7 +6,7 @@ import { UserProfileService } from '../user-profile.service';
 @Component({
   selector: 'app-image-edit',
   templateUrl: './image-edit.component.html',
-  styleUrls: ['./image-edit.component.css']
+  styleUrls: ['./image-edit.component.scss']
 })
 export class ImageEditComponent implements OnInit {
   constructor(public fb: FormBuilder,@Inject(MAT_DIALOG_DATA) public profileDictionary: any, private UserProfileService:UserProfileService,public dialogRef: MatDialogRef<ImageEditComponent>,) {

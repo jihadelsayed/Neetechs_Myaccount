@@ -12,7 +12,7 @@ export interface Kompetens {
 @Component({
   selector: 'app-edit-kompetenser',
   templateUrl: './edit-kompetenser.component.html',
-  styleUrls: ['./edit-kompetenser.component.css']
+  styleUrls: ['./edit-kompetenser.component.scss']
 })
 export class EditKompetenserComponent implements OnInit {
 

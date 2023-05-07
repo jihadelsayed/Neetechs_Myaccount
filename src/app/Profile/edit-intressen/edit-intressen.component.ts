@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-edit-intressen',
   templateUrl: './edit-intressen.component.html',
-  styleUrls: ['./edit-intressen.component.css']
+  styleUrls: ['./edit-intressen.component.scss']
 })
 
 

@@ -1,67 +1,48 @@
-<div class="profileSection" fxLayout="column" fxLayoutGap="20px">
-
-  <mat-toolbar fxLayout="row" class="header">
-    <span class="example-spacer"></span>
-    <div class="mat-headline titelprofileSection">Lägg till/redigera studie<mat-icon>school</mat-icon>
-    </div>
-
-    <span class="example-spacer"></span>
+<div class="profileSection flex flex-col gap-10">
+  <mat-toolbar class="header flex items-center">
+    <span class="flex-1"></span>
+    <div class="mat-headline titelprofileSection">Lägg till/redigera studie<mat-icon class="ml-2">school</mat-icon></div>
+    <span class="flex-1"></span>
     <a mat-dialog-close>
       <mat-icon class="iconCancel">cancel</mat-icon>
-     </a>
-
+    </a>
   </mat-toolbar>
   <mat-divider></mat-divider>
-
-
-
-
-  <div fxLayout="column" fxLayoutAlign="space-evenly stretch">
-    <div fxLayout="row" fxLayoutGap=15px>
-
-      <div fxLayout="column" fxFlex=50>
+  <div class="flex flex-col justify-evenly items-stretch">
+    <div class="flex gap-15">
+      <div class="flex flex-col flex-grow">
         <mat-form-field appearance="outline">
           <mat-label>Skola *</mat-label>
           <input matInput placeholder="T.ex. Lund universitetet" [(ngModel)]="name">
           <mat-icon matSuffix>Title</mat-icon>
         </mat-form-field>
       </div>
-
-      <div fxLayout="column" fxFlex=50>
+      <div class="flex flex-col flex-grow">
         <mat-form-field appearance="outline">
           <mat-label>Examen *</mat-label>
           <input matInput placeholder="T.ex. Kandidatexam" [(ngModel)]="degree">
           <mat-icon matSuffix>business</mat-icon>
         </mat-form-field>
       </div>
-
     </div>
-
-
-    <div fxLayout="row" fxLayoutGap=15px>
-
-      <div fxLayout="column" fxFlex=50>
+    <div class="flex gap-15">
+      <div class="flex flex-col flex-grow">
         <mat-form-field appearance="outline">
           <mat-label>Ämnesområde</mat-label>
           <input matInput placeholder="T.ex. Företagsekonomi" [(ngModel)]="plats">
           <mat-icon matSuffix>place</mat-icon>
         </mat-form-field>
       </div>
-
-      <div fxLayout="column" fxFlex=25>
+      <div class="flex flex-col flex-grow">
         <mat-form-field appearance="outline">
           <mat-label>Från</mat-label>
           <mat-select matNativeControl required [(ngModel)]="started_at">
             <mat-option>--</mat-option>
             <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
-
           </mat-select>
         </mat-form-field>
-
-
       </div>
-
-      <div fxLayout="column" fxFlex=25>
+      <div class="flex flex-col flex-grow">
         <mat-form-field appearance="outline">
           <mat-label>Till</mat-label>
           <select matNativeControl required [(ngModel)]="ended_at">
@@ -69,45 +50,20 @@
             <option *ngFor="let year of years" value="{{year}}">{{year}}</option>
           </select>
         </mat-form-field>
-
-
       </div>
-
     </div>
-
-
-
-
-
-
-
-
-    <div fxLayout="row">
+    <div class="flex">
       <div class="mat-h1">Beskrivning</div>
-
     </div>
-
     <mat-form-field class="example-full-width">
-      <textarea  matInput  [(ngModel)]="content"></textarea>
+      <textarea matInput [(ngModel)]="content"></textarea>
     </mat-form-field>
-
-
-
-
-
-</div>
-
-    <mat-divider></mat-divider>
-
-
-
-
-
-
+  </div>
+  <mat-divider></mat-divider>
   <mat-toolbar>
-    <span class="example-spacer"></span>
+    <span class="flex-1"></span>
     <button mat-flat-button class="btnDelete" *ngIf="edit" (click)="OnDelete()">Radera</button>
-    <button mat-flat-button  class="btnSpara" *ngIf="edit" (click)="OnEdit()">Spara</button>
-    <button mat-flat-button   class="btnSpara" *ngIf="edit == false" (click)="OnAdd()">Lägg till</button>
+    <button mat-flat-button class="btnSpara" *ngIf="edit" (click)="OnEdit()">Spara</button>
+   <button mat-flat-button   class="btnSpara" *ngIf="edit == false" (click)="OnAdd()">Lägg till</button>
     </mat-toolbar>
 </div>

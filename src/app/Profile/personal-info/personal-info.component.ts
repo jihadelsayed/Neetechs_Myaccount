@@ -5,7 +5,7 @@ import { EditPersronUppgifterComponent } from '../edit-persron-uppgifter/edit-pe
 @Component({
   selector: 'app-personal-info',
   templateUrl: './personal-info.component.html',
-  styleUrls: ['./personal-info.component.css']
+  styleUrls: ['./personal-info.component.scss']
 })
 export class PersonalInfoComponent implements OnInit {
   @Input() profileDictionary;
@@ -19,7 +19,7 @@ export class PersonalInfoComponent implements OnInit {
   openDialogEditPersonUppgifter() {
     const dialogRef = this.profileDictionary.dialog.open(EditPersronUppgifterComponent,{
       width: '1000px',
-      
+
       // height: '400px',
        data: {
          profileDictionary:this.profileDictionary

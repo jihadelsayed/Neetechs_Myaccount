@@ -12,7 +12,7 @@ import { UserProfileService } from '../user-profile.service';
 @Component({
   selector: 'app-edit-persron-uppgifter',
   templateUrl: './edit-persron-uppgifter.component.html',
-  styleUrls: ['./edit-persron-uppgifter.component.css']
+  styleUrls: ['./edit-persron-uppgifter.component.scss']
 })
 export class EditPersronUppgifterComponent implements OnInit {
   othersSocialMedia:any = this.profileDictionary.profileDictionary.userInfo.othersSocialMedia

@@ -7,7 +7,7 @@ import { StudiersService } from './studiers.service';
 @Component({
   selector: 'app-study',
   templateUrl: './study.component.html',
-  styleUrls: ['./study.component.css']
+  styleUrls: ['./study.component.scss']
 })
 export class StudyComponent implements OnInit {
 

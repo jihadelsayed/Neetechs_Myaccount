@@ -14,7 +14,6 @@ import { AuthorizationComponent } from './authorization/authorization.component'
 import { JwtInterceptor } from './authorization/Jwt-interceptor.interceptor';
 import { NotAuthGuard } from './authorization/services/not-auth.guard';
 import { AuthGuard } from './authorization/services/auth.guard';
-import { HomeComponent } from './home/home.component';
 import { LoginMenuComponent } from './header/login-menu/login-menu.component';
 import { UserMenuComponent } from './header/user-menu/user-menu.component';
 import { UserNotificationsMenuComponent } from './header/user-notifications-menu/user-notifications-menu.component';
@@ -29,11 +28,6 @@ import { SpinnerComponent } from './spinner/spinner.component';
 /// profiles imports
 import { AboutComponent } from './Profile/about/about.component';
 import { CompetenciesComponent } from './Profile/competencies/competencies.component';
-import { CompleteAboutComponent } from './Profile/complete/complete-about/complete-about.component';
-import { CompleteExperienceComponent } from './Profile/complete/complete-experience/complete-experience.component';
-import { CompleteLocationComponent } from './Profile/complete/complete-location/complete-location.component';
-import { CompletePersonalInfoComponent } from './Profile/complete/complete-personal-info/complete-personal-info.component';
-import { CompleteStudyComponent } from './Profile/complete/complete-study/complete-study.component';
 import { DeleteAccountComponent } from './Profile/delete-account/delete-account.component';
 import { EditErfarenhetComponent } from './Profile/edit-erfarenhet/edit-erfarenhet.component';
 import { EditIntressenComponent } from './Profile/edit-intressen/edit-intressen.component';
@@ -45,7 +39,7 @@ import { ImageEditComponent } from './Profile/image-edit/image-edit.component';
 import { InterestsComponent } from './Profile/interests/interests.component';
 import { PersonalInfoComponent } from './Profile/personal-info/personal-info.component';
 import { ProfileHeaderComponent } from './Profile/profile-header/profile-header.component';
-import { ProfileComponent } from './Profile/profile/profile.component';
+import { ProfileComponent } from './Profile/profile.component';
 import { StudyComponent } from './Profile/study/study.component';
 
 import { SelectionLoaderModule } from './spinner/selection-loader/selection-loader.module';
@@ -60,7 +54,6 @@ import { EditOMComponent } from './Profile/edit-om/edit-om.component';
     AuthorizationComponent,
     NotFoundComponent,
     AuthorizationComponent,
-    HomeComponent,
     // header component
     HeaderComponent,
     LoginMenuComponent,
@@ -85,12 +78,7 @@ import { EditOMComponent } from './Profile/edit-om/edit-om.component';
     ProfileComponent,
     AboutComponent,
     ProfileHeaderComponent,
-    CompleteStudyComponent,
-    CompleteExperienceComponent,
-    CompletePersonalInfoComponent,
     ImageEditComponent,
-    CompleteLocationComponent,
-    CompleteAboutComponent,
     EditPersronUppgifterComponent,
     StudyComponent,
 

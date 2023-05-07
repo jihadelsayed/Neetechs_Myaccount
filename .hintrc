@@ -20,6 +20,7 @@
       }
     ],
     "typescript-config/strict": "off",
-    "axe/language": "off"
+    "axe/language": "off",
+    "axe/forms": "off"
   }
 }

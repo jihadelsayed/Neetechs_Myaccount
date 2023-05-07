@@ -4,7 +4,7 @@ import { EditErfarenhetComponent } from '../edit-erfarenhet/edit-erfarenhet.comp
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css']
+  styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
   @Input() profileDictionary;
@@ -16,7 +16,7 @@ export class ExperienceComponent implements OnInit {
     this.Erfarenhets = this.profileDictionary.Erfarenhets
 
   }
-  
+
   openDialogEditErfarenhet(experience) {
     const edit = true
     const dialogRef = this.profileDictionary.dialog.open(EditErfarenhetComponent,{

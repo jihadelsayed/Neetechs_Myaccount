@@ -11,12 +11,11 @@
       </button>
     </mat-toolbar>
 
-    <div class= "mat-subheading-2 abouttext" >
+    <div class= "mat-subheading-2 aboutText" >
       <app-selection-loader *ngIf="!this.profileDictionary.PersonaInfoLoaded" Cwidth="100" Cheight="100"></app-selection-loader>
 
       <div  *ngIf="this.profileDictionary.PersonaInfoLoaded">
         {{ this.profileDictionary.userInfo.about }}
-    
+
     </div>
   </div>
- 

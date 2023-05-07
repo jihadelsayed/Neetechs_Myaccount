@@ -7,7 +7,7 @@ import { ImageEditComponent } from '../image-edit/image-edit.component';
 @Component({
   selector: 'app-profile-header',
   templateUrl: './profile-header.component.html',
-  styleUrls: ['./profile-header.component.css']
+  styleUrls: ['./profile-header.component.scss']
 })
 export class ProfileHeaderComponent implements OnInit {
   SERVER_URL = environment.SERVER_URL_WITH_OUT_SLASH

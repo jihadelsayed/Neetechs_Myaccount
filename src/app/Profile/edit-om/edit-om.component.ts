@@ -6,7 +6,7 @@ import { UserProfileService } from '../user-profile.service';
 @Component({
   selector: 'app-edit-om',
   templateUrl: './edit-om.component.html',
-  styleUrls: ['./edit-om.component.css']
+  styleUrls: ['./edit-om.component.scss']
 })
 export class EditOMComponent implements OnInit {
 

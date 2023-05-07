@@ -4,7 +4,7 @@ import { EditIntressenComponent } from '../edit-intressen/edit-intressen.compone
 @Component({
   selector: 'app-interests',
   templateUrl: './interests.component.html',
-  styleUrls: ['./interests.component.css']
+  styleUrls: ['./interests.component.scss']
 })
 export class InterestsComponent implements OnInit {
   @Input() profileDictionary;
@@ -17,7 +17,7 @@ export class InterestsComponent implements OnInit {
         profileDictionary:this.profileDictionary
       }});
     dialogRef.afterClosed().subscribe(result => {
-    
+
       console.log(`Dialog result: ${result}`);
     });
   }

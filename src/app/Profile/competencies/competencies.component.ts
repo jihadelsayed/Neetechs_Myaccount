@@ -4,7 +4,7 @@ import { EditKompetenserComponent } from '../edit-kompetenser/edit-kompetenser.c
 @Component({
   selector: 'app-competencies',
   templateUrl: './competencies.component.html',
-  styleUrls: ['./competencies.component.css']
+  styleUrls: ['./competencies.component.scss']
 })
 export class CompetenciesComponent implements OnInit {
   @Input() profileDictionary;

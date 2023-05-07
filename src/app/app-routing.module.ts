@@ -1,4 +1,3 @@
-import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,8 +10,6 @@ const routes: Routes = [
   // authentication component
   //{ path:'',component: HomeComponent,canActivate:[NotAuthGuard] },
   //{ path:'', pathMatch:'full', redirectTo:'home' ,component: AppComponent,canActivate:[AuthGuard] },
-  { path:'home' ,component: HomeComponent },
-  { path:'**',component: HomeComponent },
 
 ];
 
