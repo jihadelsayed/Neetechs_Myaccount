@@ -13,6 +13,7 @@ export class ProfileHeaderComponent implements OnInit {
   SERVER_URL = environment.SERVER_URL_WITH_OUT_SLASH
   @Input() profileDictionary;
   DATAstring = "";
+
   constructor(private route: Router ,) {
 
 

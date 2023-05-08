@@ -12,6 +12,7 @@ export const environment = {
   SERVER_URL_WITH_OUT_SLASH: "",
   //SERVER_URL: "https://server."+ window.location.hostname.replace(/^[^.]+./, '') +".com/",
   SERVER_URL: "https://server."+ window.location.hostname.split(".")[1]+"."+window.location.hostname.split(".")[2] +"/",
+  MY_ACCOUNT_URL: "https://myaccount."+ window.location.hostname.split(".")[1]+"."+window.location.hostname.split(".")[2] +"/",
   //CHAT_URL: "wss://server."+ window.location.hostname.replace(/^[^.]+./, '') +"/ws/chat/",
   CHAT_URL: "wss://server."+ window.location.hostname.split(".")[1]+"."+window.location.hostname.split(".")[2] +"/ws/chat/",
   FrontEnd_URL: window.location.origin,
