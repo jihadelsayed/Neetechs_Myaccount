@@ -4,7 +4,7 @@ npm i @angular/flex-layout --save
 npm i @angular/material-moment-adapter --save --force
 # Neetechs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+This project was generated with [Angular CLI](git@github.com:jihadelsayed/angular/angular-cli) version 14.0.2.
 
 ## Development server
 
