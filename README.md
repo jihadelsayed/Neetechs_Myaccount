@@ -2,6 +2,10 @@
 npm i ngx-avatar --save
 npm i @angular/flex-layout --save
 npm i @angular/material-moment-adapter --save --force
+
+# generate tailwind file 
+npx tailwindcss build -o tailwind.css
+
 # Neetechs
 
 This project was generated with [Angular CLI](git@github.com:jihadelsayed/angular/angular-cli) version 14.0.2.
