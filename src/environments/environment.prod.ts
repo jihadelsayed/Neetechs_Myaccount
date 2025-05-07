@@ -9,20 +9,14 @@ export const environment = {
   // CHAT_URL: "ws://localhost:8000/ws/chat/",
   // SERVER_URL_WITH_OUT_SLASH: "http://127.0.0.1:8000",
   STRIPE_PUBLIC_KEY: "pk_test_51IwTvvIR19rXEZpRWoj9M4BGNy5nJ1GQOsXUZXHRD0PS3QGexQQSVNQR0vMB8jMoONQtO4RNQ30pC3N5BdgiGstB00shA8ejRI",
-  SERVER_URL_WITH_OUT_SLASH: "",
-  //SERVER_URL: "https://server."+ window.location.hostname.replace(/^[^.]+./, '') +".com/",
-  SERVER_URL: "https://server."+ window.location.hostname.split(".")[1]+"."+window.location.hostname.split(".")[2] +"/",
-  MY_ACCOUNT_URL: "https://myaccount."+ window.location.hostname.split(".")[1]+"."+window.location.hostname.split(".")[2] +"/",
-  //CHAT_URL: "wss://server."+ window.location.hostname.replace(/^[^.]+./, '') +"/ws/chat/",
-  CHAT_URL: "wss://server."+ window.location.hostname.split(".")[1]+"."+window.location.hostname.split(".")[2] +"/ws/chat/",
-  FrontEnd_URL: window.location.origin,
-  // LoginURL: "http://localhost:4442/",
-  MainDomain: window.location.hostname,
-  //MainDomain: window.location.hostname.replace(/^[^.]+./, ''),
-  LoginURL: "https://accounts." + window.location.hostname.split(".")[1]+"."+window.location.hostname.split(".")[2] +"/",
-  //LoginURL: "https://accounts.theislamicnation.com/",
-  JSON_URL: 'https://raw.githubusercontent.com/jihadelsayed/neetechs/main/json/',
-
+  SERVER_URL: '', // assign in browser at runtime
+  SERVER_URL_WITH_OUT_SLASH: '',
+  CHAT_URL: '',
+  JSON_URL: 'https://raw.githubusercontent.com/jihadelsayed/neetechs/main/json/islam/',
+  FrontEnd_URL: '',
+  MainDomain: '',
+  LoginURL: '',
+  MY_ACCOUNT_URL: "https://myaccount.neetechs.com/"
 };
 
 /*

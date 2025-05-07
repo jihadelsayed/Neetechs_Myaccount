@@ -4,7 +4,6 @@ import { Component, Inject, LOCALE_ID } from '@angular/core';
 import { StyleModeService } from './header/style-mode.service';
 import { RouterOutlet } from '@angular/router';
 import { environment } from '../environments/environment.prod';
-import '@angular/localize/init';
 import { SpinnerComponent } from "./spinner/spinner.component";
 import { AuthorizationComponent } from "./authorization/authorization.component";
 import { NgClass } from '@angular/common';
