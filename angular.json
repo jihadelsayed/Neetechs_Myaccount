@@ -4,20 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "neetechs": {
-      "i18n": {
-        "sourceLocale":"en-US",
-        "locales": {
-          "ar": "src/locale/messages.ar.xlf",
-          "es": "src/locale/messages.es.xlf",
-          "pt": "src/locale/messages.pt.xlf",
-          "de": "src/locale/messages.de.xlf",
-          "ru": "src/locale/messages.ru.xlf",
-          "sv": "src/locale/messages.sv.xlf",
-          "zh": "src/locale/messages.zh.xlf",
-          "fr": "src/locale/messages.fr.xlf",
-          "en": "src/locale/messages.xlf"
-        }
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -27,114 +13,54 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize":[
-              "ar",
-              "es",
-              "pt",
-              "de",
-              "ru",
-              "sv",
-              "zh",
-              "fr",
-              "en"
-            ],
             "outputPath": "dist/neetechs",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"            ],
+              "src/styles.scss"
+            ],
             "scripts": [],
-            "ngswConfigPath": "ngsw-config.json"
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
-            "es":{
-              "localize":[
-                "es"
-            ]
-            },
-            "en":{
-              "localize":[
-                "en"
-            ]
-            },
-            "pt":{
-              "localize":[
-                "pt"
-            ]
-            },
-            "ar":{
-              "localize":[
-                "ar"
-            ]
-            },
-            "de":{
-              "localize":[
-                "de"
-            ]
-            },
-            "ru":{
-              "localize":[
-                "ru"
-            ]
-            },
-            "sv":{
-              "localize":[
-                "sv"
-            ]
-            },
-            "zh":{
-              "localize":[
-                "zh"
-            ]
-            },
-            "fr":{
-              "localize":[
-                "fr"
-            ]
-            },
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
             },
-
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -143,75 +69,38 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "neetechs:build:production"
+              "buildTarget": "neetechs:build:production"
             },
             "development": {
-              "browserTarget": "neetechs:build:development"
-            },
-            "ar": {
-              "browserTarget": "neetechs:build:ar"
-            },
-            "en": {
-              "browserTarget": "neetechs:build:en"
-            },
-            "es": {
-              "browserTarget": "neetechs:build:es"
-            },
-            "pt": {
-              "browserTarget": "neetechs:build:pt"
-            },
-
-            "de": {
-              "browserTarget": "neetechs:build:de"
-            },
-            "ru": {
-              "browserTarget": "neetechs:build:ru"
-            },
-            "sv": {
-              "browserTarget": "neetechs:build:sv"
-            },
-            "zh": {
-              "browserTarget": "neetechs:build:zh"
-            },
-            "fr": {
-              "browserTarget": "neetechs:build:fr"
+              "buildTarget": "neetechs:build:development"
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "neetechs:build"
-          }
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"         
+              "src/styles.scss"
             ],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
-          }
         }
-
       }
     }
   }

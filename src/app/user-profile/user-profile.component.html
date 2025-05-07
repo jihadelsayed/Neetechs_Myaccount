@@ -1,0 +1,29 @@
+<div class="profile-container" *ngIf="profile$ | async as profile">
+    <div class="profile-header-container">
+      <div class="profile-section-header">
+        <app-profile-header ></app-profile-header>
+      </div>
+    </div>
+  
+    <div class="profile-grid">
+      <div class="profile-section">
+        <app-about></app-about>
+      </div>
+      <div class="profile-section">
+        <app-personal-info ></app-personal-info>
+      </div>
+      <div class="profile-section">
+        <app-experience ></app-experience>
+      </div>
+      <div class="profile-section">
+        <app-study ></app-study>
+      </div>
+      <div class="profile-section">
+        <app-competencies ></app-competencies>
+      </div>
+      <div class="profile-section">
+        <app-interests ></app-interests>
+      </div>
+    </div>
+  </div>
+  

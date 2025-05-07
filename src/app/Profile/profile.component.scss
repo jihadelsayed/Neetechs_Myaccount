@@ -1,3 +1,23 @@
-.profileSection{
-  padding-top:112px;
+.profile-container {
+  display: grid;
+  row-gap: 60px;
+  justify-items: center;
+  padding: 40px 20px;
+}
+
+.profile-header-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.profile-section {
+  padding-top: 112px;
 }

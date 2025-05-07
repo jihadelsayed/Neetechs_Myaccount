@@ -1,32 +1,28 @@
-<div class="flex flex-col justify-evenly items-center">
-  <div class="profileHeaderContainer flex gap-10">
-    <div class="profileSectionheader">
+<div class="profile-container">
+  <div class="profile-header-container">
+    <div class="profile-section-header">
       <app-profile-header [profileDictionary]="profileDictionary"></app-profile-header>
     </div>
   </div>
 
-  <div class="flex justify-evenly items-stretch flex-1 gap-10 flex flex-col justify-start items-center flex-85 gap-20">
-
-      <div class="profileSection flex flex-col gap-10">
-        <app-about [profileDictionary]="profileDictionary"></app-about>
-      </div>
-      <div class="profileSection flex flex-col gap-10">
-        <app-personal-info [profileDictionary]="profileDictionary"></app-personal-info>
-      </div>
-      <div class="profileSection flex flex-col gap-10">
-        <app-experience [profileDictionary]="profileDictionary"></app-experience>
-      </div>
-
-      <div class="profileSection flex flex-col gap-10">
-        <app-study [profileDictionary]="profileDictionary"></app-study>
-      </div>
-
-      <div class="profileSection flex flex-col gap-10">
-        <app-competencies [profileDictionary]="profileDictionary"></app-competencies>
-      </div>
-
-      <div class="profileSection flex flex-col gap-10">
-        <app-interests [profileDictionary]="profileDictionary"></app-interests>
-      </div>
+  <div class="profile-grid">
+    <div class="profile-section">
+      <app-about [profileDictionary]="profileDictionary"></app-about>
     </div>
+    <div class="profile-section">
+      <app-personal-info [profileDictionary]="profileDictionary"></app-personal-info>
+    </div>
+    <div class="profile-section">
+      <app-experience [profileDictionary]="profileDictionary"></app-experience>
+    </div>
+    <div class="profile-section">
+      <app-study [profileDictionary]="profileDictionary"></app-study>
+    </div>
+    <div class="profile-section">
+      <app-competencies [profileDictionary]="profileDictionary"></app-competencies>
+    </div>
+    <div class="profile-section">
+      <app-interests [profileDictionary]="profileDictionary"></app-interests>
+    </div>
+  </div>
 </div>
