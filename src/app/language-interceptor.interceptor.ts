@@ -15,7 +15,7 @@ export class LanguageInterceptorInterceptor implements HttpInterceptor {
     this.currentLocale = this.locale.split('-', 1)[0];
   }
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    console.log('locale', this.currentLocale);
+    //console.log('locale', this.currentLocale);
     // Clone the request to add the new header
     const clonedRequest = request.clone({
       headers: request.headers.set('accept-language', this.currentLocale),

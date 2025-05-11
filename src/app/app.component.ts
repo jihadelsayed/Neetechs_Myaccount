@@ -26,7 +26,7 @@ export class AppComponent {
    // this.titleService.setTitle($localize`:@@appTitle:NeeTechs`);
   }
   ngOnInit(): void {
-    console.log(environment)
+    //console.log(environment)
   }
 }
 
