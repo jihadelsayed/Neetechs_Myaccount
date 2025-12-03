@@ -1,0 +1,14 @@
+<div class="dropdown">
+  <button class="dropdown-toggle" (click)="toggleDropdown()" aria-label="show notifications">
+    <!-- your bell icon -->
+    <svg>...</svg>
+  </button>
+
+  <div class="dropdown-menu" *ngIf="isOpen">
+    <a href="#" class="dropdown-item">Sara Salah replied...</a>
+    <a href="#" class="dropdown-item">Slick Net followed you</a>
+    <a href="#" class="dropdown-item">Jane Doe liked your comment</a>
+    <a href="#" class="dropdown-item">Abigail Bennett followed you</a>
+    <a href="#" class="dropdown-item see-all">See all notifications</a>
+  </div>
+</div>
